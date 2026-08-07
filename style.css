@@ -36,8 +36,20 @@ li {
     h1 {
         font-size: 24px;
     }
-    
+
     .conteneur-boites {
         flex-direction: column;
     }
+}
+.grille-projets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+.carte {
+    background-color: #444;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-radius: 8px;
 }
