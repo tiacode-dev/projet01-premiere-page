@@ -31,3 +31,13 @@ li {
     border-radius: 8px;
 
 }
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 24px;
+    }
+    
+    .conteneur-boites {
+        flex-direction: column;
+    }
+}
