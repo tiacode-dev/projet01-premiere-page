@@ -10,3 +10,26 @@ let bouton = document.getElementById("mon-bouton");
 let zoneMessage = document.getElementById("message");
 bouton.addEventListener("click", function() { zoneMessage.textContent ="Tu as cliqué sur le bouton !";
 });
+
+let ageUtilisateur = 7;
+
+if (ageUtilisateur < 18) {
+    console.log("Tu es mineur.");
+} else if (ageUtilisateur < 65) {
+    console.log("Tu es majeur.");
+} else {(ageUtilisateur >=65)
+    console.log("Tu es senior.");
+}let boutonAge = document.getElementById("bouton-age");
+let resultatAge = document.getElementById("resultat-age")
+
+boutonAge.addEventListener("click", function() {
+let champAge = document.getElementById("champ-age")
+let valeurAge = champAge.value;
+ if (valeurAge < 18) { 
+    resultatAge.textContent = "Tu es mineur.";
+  } else if (valeurAge < 65) {
+    resultatAge.textContent = "Tu es majeur.";
+  } else { 
+    resultatAge.textContent = "Tu es senior.";
+  }
+});
