@@ -33,3 +33,18 @@ let valeurAge = champAge.value;
     resultatAge.textContent = "Tu es senior.";
   }
 });
+for (let i = 1; i <= 10; i++) {
+    console.log("Tour numero " + i);
+}
+let passion = ["la nage","le foot","l'internet","le trading"];
+for (let i = 0; i < passion.length; i++) {
+    console.log("Passion : " + passion[i]);
+}
+let competences = ["HTML", "CSS","JavaScript", "Git"];
+let listeCompetences = document.getElementById("liste-competences");
+
+for (let i = 0; i < competences.length; i++) {
+    let nouvelElement = document.createElement("li");
+    nouvelElement.textContent = competences[i];
+    listeCompetences.appendChild(nouvelElement);
+}
