@@ -22,16 +22,18 @@ if (ageUtilisateur < 18) {
 }let boutonAge = document.getElementById("bouton-age");
 let resultatAge = document.getElementById("resultat-age")
 
-boutonAge.addEventListener("click", function() {
-let champAge = document.getElementById("champ-age")
-let valeurAge = champAge.value;
- if (valeurAge < 18) { 
-    resultatAge.textContent = "Tu es mineur.";
-  } else if (valeurAge < 65) {
-    resultatAge.textContent = "Tu es majeur.";
-  } else { 
-    resultatAge.textContent = "Tu es senior.";
-  }
+function verifierAge(age) {
+    if (age < 18){
+        return "Tu es Mineur.";
+    } else if (age < 65){
+        return "Tu es majeur.";
+    } else {
+        return "Tu es senior.";
+    }
+}
+boutonAge.addEventListener ("click", function() {
+    let valeurAge = document.getElementById("champ-age").value;
+    resultatAge.textContent = verifierAge(valeurAge);
 });
 for (let i = 1; i <= 10; i++) {
     console.log("Tour numero " + i);
@@ -48,3 +50,12 @@ for (let i = 0; i < competences.length; i++) {
     nouvelElement.textContent = competences[i];
     listeCompetences.appendChild(nouvelElement);
 }
+function direBonjour() {
+    console.log("Bonjour ! Bienvenue sur mon Site:");
+}
+direBonjour();
+function direBonjourA(nom) {
+    console.log("Bonjour " + nom + " ! Bienvenue sur mon site");
+}
+direBonjourA("Marie");
+direBonjourA("Paul");
